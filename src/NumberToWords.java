@@ -2,36 +2,36 @@ public class NumberToWords {
 
     public static void numberToWords(int number) {
 
-        if (number < 0) {
+        int tempNumber = reverse(number);
+
+        if (tempNumber < 0) {
             System.out.println("Invalid Value");
         }
 
-        int lastDigit;
-        int tempNumber = reverse(number);
 
-        for (int i = 0; i <= getDigitCount(number); i++) {
+        for (int i = 0; i < getDigitCount(number); i++) {
 
-            lastDigit = tempNumber % 10; // Extracting the last digit of int number.
+            int lastDigit = tempNumber % 10; // Extracting the last digit of int number.
 
-                if (tempNumber == 0) {
+                if (lastDigit == 0) {
                     System.out.println("Zero");
-                } else if (tempNumber == 1) {
+                } else if (lastDigit == 1) {
                     System.out.println("One");
-                } else if (tempNumber == 2) {
+                } else if (lastDigit == 2) {
                     System.out.println("Two");
-                } else if (tempNumber == 3) {
+                } else if (lastDigit == 3) {
                     System.out.println("Three");
-                } else if (tempNumber == 4) {
+                } else if (lastDigit == 4) {
                     System.out.println("Four");
-                } else if (tempNumber == 5) {
+                } else if (lastDigit == 5) {
                     System.out.println("Five");
-                } else if (tempNumber == 6) {
+                } else if (lastDigit == 6) {
                     System.out.println("Six");
-                } else if (tempNumber == 7) {
+                } else if (lastDigit == 7) {
                     System.out.println("Seven");
-                } else if (tempNumber == 8) {
+                } else if (lastDigit == 8) {
                     System.out.println("Eight");
-                } else if (tempNumber == 9) {
+                } else if (lastDigit == 9) {
                     System.out.println("Nine");
                 }
 
@@ -42,7 +42,7 @@ public class NumberToWords {
     public static int reverse(int reversedNumber) {
 
         int tempNumber = 0;
-        int lastDigit ;
+        int lastDigit;
 
         while (reversedNumber != 0) {
 
