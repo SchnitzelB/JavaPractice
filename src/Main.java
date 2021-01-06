@@ -2,66 +2,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        int count = 6;
-//        while (count != 6) {
-//            System.out.println("Count value is " + count);
-//            count++;
-//        }
-//
-//        System.out.println();
+        String numberAsString = "2018.125";
+        System.out.println("numberAsString = " + numberAsString);
 
-//        count = 6;
-//        do {
-//            System.out.println("Count value was " + count);
-//            count++;
-//
-//            if (count > 100) {
-//                break;
-//            }
-//
-//        } while (count != 6);
-//
+        /* Parsing Method
+        * A parsing method is used to convert data types
+        * */
 
-        int number = 4;
-        int finishNumber = 20;
-        int count = 0;
+        double number = Double.parseDouble(numberAsString);
+        System.out.println("number = " + number);
 
-        while (number <= finishNumber) {
-            number++;
-            if (!isEvenNumber(number)) {
-                count++;
-                continue;
-            }
-            System.out.println("Even number " + number);
-
-            if (count == 5) {
-                System.out.println("There are " + count + " even numbers in this loop");
-                break;
-            }
-        }
+        numberAsString += 1; // Adding 1 to String numberAsString will append the number to the end of the String
+                            // because the 1 is an int, which is being added to the String (incompatible data types)
+                            // Therefore, "20181" will output in the console.
+        number += 1; // Adding a 1 to int number will result in the output 2019 because both data types are the same (int)
+        System.out.println("numberAsString = " + numberAsString);
+        System.out.println("number = " + number);
 
         System.out.println();
 
-        System.out.println(DigitSumChallenge.sumDigits(125));
-        System.out.println(DigitSumChallenge.sumDigits(-125));
-        System.out.println(DigitSumChallenge.sumDigits(4));
-        System.out.println(DigitSumChallenge.sumDigits(32123));
-
-        System.out.println();
-
-        System.out.println(NumberPalindrome.isPalindrome(-1221));
-        System.out.println(NumberPalindrome.isPalindrome(707));
-        System.out.println(NumberPalindrome.isPalindrome(11212));
-
+        System.out.println(FlourPacker.canPack(1,0,4));
+        System.out.println(FlourPacker.canPack(1,0,5));
+        System.out.println(FlourPacker.canPack(0,5,4));
+        System.out.println(FlourPacker.canPack(2,2,11));
+        System.out.println(FlourPacker.canPack(-3,2,12));
     }
 
-    public static boolean isEvenNumber(int evenNumber) {
-
-        if (evenNumber % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
-
-    }
 }

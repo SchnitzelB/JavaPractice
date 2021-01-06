@@ -7,10 +7,10 @@ public class SharedDigit {
         }
 
         int secondFN = firstNumber % 10;
-        int firstFN = (firstNumber /= 10)  % 10;
+        int firstFN = (firstNumber /= 10) % 10;
 
         int secondSN = secondNumber % 10;
-        int firstSN = (secondNumber /= 10)  % 10;
+        int firstSN = (secondNumber /= 10) % 10;
 
 
         return ((firstFN == firstSN) || (firstFN == secondSN) || (secondFN == firstSN) || (secondFN == secondSN));
