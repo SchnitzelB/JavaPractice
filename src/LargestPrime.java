@@ -6,9 +6,22 @@ public class LargestPrime {
             return -1;
         }
 
-        for (int i = 1; number % i == 0; i++) {
+        int remainderInt = 0;
+        int largestPrimeNumber = 0;
+
+        for (int i = 3; i < number; i++) {
+
+            if (number % i == 0) {
+                remainderInt = i;
+                if (remainderInt % i == 0) {
+                    largestPrimeNumber = remainderInt;
+
+                }
+            }
 
         }
+
+        return largestPrimeNumber;
 
     }
 }
