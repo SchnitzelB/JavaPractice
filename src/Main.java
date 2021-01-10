@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,26 +21,27 @@ public class Main {
         System.out.println("numberAsString = " + numberAsString);
         System.out.println("number = " + number);
 
-        System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        int input = 0;
+        int inputSum = 0;
+        int i = 1;
 
-        System.out.println(FlourPacker.canPack(1,0,4));
-        System.out.println(FlourPacker.canPack(1,0,5));
-        System.out.println(FlourPacker.canPack(0,5,4));
-        System.out.println(FlourPacker.canPack(2,2,11));
-        System.out.println(FlourPacker.canPack(-3,2,12));
+        while (i <= 10) {
+            System.out.println("Enter number #" + i + ": ");
+            if (scanner.hasNextInt()) {
+                input = scanner.nextInt();
+                inputSum += input;
+                i++;
+            } else {
+                System.out.println("Invalid Number");
+                break;
+            }
 
-        System.out.println();
+        }
+        System.out.println("The sum of all input numbers is " + inputSum);
+        scanner.close();
 
-        System.out.println(LargestPrime.getLargestPrime(21));
-        System.out.println(LargestPrime.getLargestPrime(217));
-        System.out.println(LargestPrime.getLargestPrime(0));
-        System.out.println(LargestPrime.getLargestPrime(45));
-        System.out.println(LargestPrime.getLargestPrime(-1));
-        System.out.println(LargestPrime.getLargestPrime(7));
-
-        System.out.println();
-
-        System.out.println();
     }
+
 
 }
