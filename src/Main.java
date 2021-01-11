@@ -9,27 +9,30 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int number = 0;
-        int min, max;
-        min = max = number;
+        int min = 0; int max = 0;
 
         while (true) {
 
             System.out.println("Enter number: ");
-            number = scanner.nextInt();
-            if (number > min) {
-                min = number;
-            } else if (number < max) {
-                max = number;
-            } else if (!scanner.hasNextInt()){
-                System.out.println("Max number = " + max);
-                System.out.println("Min number = " + min);
+            boolean isAnInt = scanner.hasNextInt();
+
+            if (isAnInt) {
+
+               int number = scanner.nextInt();
+
+                if (number > max) {
+                    max = number;
+                } else if (number < min) {
+                    min = number;
+                }
+
+            } else {
                 break;
             }
-
             scanner.nextLine();
+            }
 
-        }
+        System.out.println("Max number = " + max + ", Min number = " + min);
 
 
         scanner.close();
