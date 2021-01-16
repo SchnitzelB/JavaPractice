@@ -1,41 +1,48 @@
-import java.util.Scanner;
-
-/*
-
-*/
 public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        //Person Challenge begins here
+        System.out.println("Person Challenge");
+        Person person = new Person();
 
-        int min = 0; int max = 0;
+        person.setFirstName("");
+        person.setLastName("");
+        person.setAge(10);
 
-        while (true) {
+        System.out.println("fullName = " + person.getFullName());
+        System.out.println("teen = " + person.isTeen());
 
-            System.out.println("Enter number: ");
-            boolean isAnInt = scanner.hasNextInt();
+        person.setFirstName("John");
+        person.setAge(18);
 
-            if (isAnInt) {
+        System.out.println("fullName = " + person.getFullName());
+        System.out.println("teen = " + person.isTeen());
 
-               int number = scanner.nextInt();
+        person.setLastName("Smith");
+        System.out.println("fullName = " + person.getFullName());
 
-                if (number > max) {
-                    max = number;
-                } else if (number < min) {
-                    min = number;
-                }
+        System.out.println();
+        System.out.println("-------------------------");
+        System.out.println();
+        // Wall Area Challenge begins here
+        System.out.println("Wall Area Challenge");
 
-            } else {
-                break;
-            }
-            scanner.nextLine();
-            }
+        Wall wall = new Wall(5,5);
+        //This sets the instance variables within the
+        //Wall class.
+        //private double width = 5;
+        //private double height = 5;
 
-        System.out.println("Max number = " + max + ", Min number = " + min);
+        System.out.println("Area = "  + wall.getArea());
 
+        wall.setHeight(-1.5);
+        System.out.println("Width = " + wall.getWidth());
+        System.out.println("Height = " + wall.getHeight());
+        System.out.println("Area = " + wall.getArea());
 
-        scanner.close();
+        System.out.println();
+        System.out.println("-------------------------");
 
     }
 
