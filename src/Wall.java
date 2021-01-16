@@ -20,7 +20,6 @@ public class Wall {
         } else {
             this.height = height;
         }
-
     }
 
     public double getWidth() {
