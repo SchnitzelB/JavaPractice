@@ -62,7 +62,7 @@ public class Main {
         System.out.println("-------------------------");
         System.out.println();
 
-        System.out.println("Complex Number Challenge");
+        System.out.println("Complex Operations Challenge");
 
         ComplexNumber one = new ComplexNumber(1.0,1.0);
         ComplexNumber number = new ComplexNumber(2.5,-1.5);
@@ -85,6 +85,15 @@ public class Main {
         System.out.println();
         System.out.println("-------------------------");
         System.out.println();
+
+        Animal animal = new Animal("Animal", 1,1,5,5);
+
+        Dog dog = new Dog("Yorkie",8,20,2,4,1,20,"Long Silky");
+
+        System.out.println("The " + dog.getName() + " weighs " + dog.getWeight() + " lbs.");
+        dog.eat();
+        dog.walk();
+        //dog.run();
 
     }
 

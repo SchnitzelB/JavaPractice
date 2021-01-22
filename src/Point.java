@@ -4,8 +4,6 @@ public class Point {
     private int y;
 
     public Point() {
-        this.x = x;
-        this.y = y;
     }
 
     public Point(int x, int y) {
@@ -29,12 +27,16 @@ public class Point {
         this.y = y;
     }
 
-    public int distance(int x, int y) {
+    public double distance() {
+        return distance(new Point(0,0));
+    }
 
-        if (x - y == 0) {
-            return Double.parseDouble()
-        }
+    public double distance(int x, int y) {
+        return distance(new Point(x,y));
+    }
 
+    public double distance(Point point) {
+        return (Math.sqrt(Math.pow(point.getX() - this.x, 2) + Math.pow(point.getY() - this.y, 2)));
     }
 
 }
