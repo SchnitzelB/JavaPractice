@@ -12,9 +12,11 @@ public class Fish extends Animal {
         this.fins = fins;
     }
 
-    private void rest() {
-
+    void rest() {
+        System.out.println("Fish.rest() called." +
+                " The " + super.getName() + " does rest.");
     }
+
     private void moveMuscles() {
 
     }
@@ -27,7 +29,8 @@ public class Fish extends Animal {
         moveMuscles();
         moveBackFin();
         super.move(speed);
-
-
     }
+
+
+
 }

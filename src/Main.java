@@ -89,12 +89,39 @@ public class Main {
         Animal animal = new Animal("Animal", 1,1,5,5);
 
         Dog dog = new Dog("Yorkie",8,20,2,4,1,20,"Long Silky");
+        Fish fish = new Fish("Clownfish", 4,2,1,2,3);
 
         System.out.println("The " + dog.getName() + " weighs " + dog.getWeight() + " lbs.");
         dog.eat();
         dog.walk();
         //dog.run();
+        fish.rest();
 
+        /* METHOD OVERLOADING
+        * Method overloading means defining a method in the child class that
+        * already exists in the parent class with the same
+        * signature (same name, same args).
+        *
+        * Method Overloading is AKA, Runtime Polymorphism and Dynamic Method Dispatch
+        * because the method that will be called is decided at runtime by the
+        * JVM!
+        *
+        * Only Instance Methods can be overridden, NOT STATIC METHODS.
+        *
+        * It is recommended to use '@override' immediately above the method definition when overriding.
+        * '@Override' is an annotation that the compiler reads and will decide if the method is
+        * overridden properly.
+        *
+        *
+        * */
+
+        /* EXTENDING METHODS
+        * By extending the parent class, the child class receives all the
+        * methods defined in the parent class AKA Derived Methods.
+        * */
+
+        /*
+        * */
     }
 
 
