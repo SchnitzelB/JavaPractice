@@ -2,16 +2,20 @@ public class Vehicle {
 
     private int wheels;
     private int doors;
-    private int color;
-    private String changingGears;
+    private String transmissionType;
+    private String steeringType;
     private int maxSpeed;
 
-    public Vehicle(int wheels, int doors, int color, String changingGears, int maxSpeed) {
+    public Vehicle(int wheels, int doors, String transmissionType, String steeringType, int maxSpeed) {
         this.wheels = wheels;
         this.doors = doors;
-        this.color = color;
-        this.changingGears = changingGears;
+        this.transmissionType = transmissionType;
+        this.steeringType = steeringType;
         this.maxSpeed = maxSpeed;
+    }
+
+    public String getSteeringType() {
+        return steeringType;
     }
 
     public int getWheels() {
@@ -22,16 +26,13 @@ public class Vehicle {
         return doors;
     }
 
-    public int getColor() {
-        return color;
-    }
-
-    public String getChangingGears() {
-        return changingGears;
+    public String getTransmissionType() {
+        return transmissionType;
     }
 
     public int getMaxSpeed() {
         return maxSpeed;
     }
+
 
 }

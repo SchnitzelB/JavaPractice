@@ -1,23 +1,33 @@
-public class Car {
+public class Car extends Vehicle{
 
-    private int doors;
-    private int wheels;
-    private String model;
     private String engine;
     private String color;
 
-    public void setModel(String model) {
-        String validModel = model.toLowerCase();
-        if (validModel.equals("carrera") || validModel.equals("commodore")) {
-            this.model = model;
-        } else {
-            this.model = "Unknown";
-        }
+    public Car(int wheels, int doors, String transmissionType, String steeringType, int maxSpeed, String engine, String color) {
+        super(4, doors, transmissionType, steeringType, maxSpeed);
+        // In simple terms, this line, super(), basically calls and initializes the instance variables from the parent class.
+        this.engine = engine;
+        this.color = color;
     }
 
-    public String getModel() {
-        return this.model;
+    public String getEngine() {
+        return engine;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    //    public void setModel(String model) {
+//        String validModel = model.toLowerCase();
+//        if (validModel.equals("carrera") || validModel.equals("commodore")) {
+//            this.model = model;
+//        } else {
+//            this.model = "Unknown";
+//        }
+//    }
+
+
 
 }
 
