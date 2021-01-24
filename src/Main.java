@@ -108,7 +108,7 @@ public class Main {
         *
         * Only Instance Methods can be overridden, NOT STATIC METHODS.
         *
-        * It is recommended to use '@override' immediately above the method definition when overriding.
+        * It is recommended to use '@Override' immediately above the method definition when overriding.
         * '@Override' is an annotation that the compiler reads and will decide if the method is
         * overridden properly.
         *
