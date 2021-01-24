@@ -129,6 +129,11 @@ public class Main {
 
         System.out.println("Vehicle Operations Challenge");
 
+        Vehicle vehicleOne = new Vehicle(4,2,"Automatic","Power Steering",500);
+        Car car = new Car(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(),
+                vehicleOne.maxHorsePower(), "V8","Crimson Red","Ford");
+
+        System.out.println(car.getTransmissionType());
 
         System.out.println();
         System.out.println("-------------------------");

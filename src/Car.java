@@ -5,8 +5,8 @@ public class Car extends Vehicle{
     private String manufacturerName;
 
 
-    public Car(int wheels, int doors, String transmissionType, String steeringType, int maxSpeed, String engine, String color, String manufacturerName) {
-        super(4, doors, transmissionType, steeringType, maxSpeed);
+    public Car(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower, String engine, String color, String manufacturerName) {
+        super(4, doors, transmissionType, steeringType, maxHorsePower);
         // In simple terms, this line, super(), basically calls and initializes the instance variables from the parent class.
         this.engine = engine;
         this.color = color;

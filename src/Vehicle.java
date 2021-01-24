@@ -4,14 +4,14 @@ public class Vehicle {
     private int doors;
     private String transmissionType;
     private String steeringType;
-    private int maxSpeed;
+    private int maxHorsePower;
 
-    public Vehicle(int wheels, int doors, String transmissionType, String steeringType, int maxSpeed) {
+    public Vehicle(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower) {
         this.wheels = wheels;
         this.doors = doors;
         this.transmissionType = transmissionType;
         this.steeringType = steeringType;
-        this.maxSpeed = maxSpeed;
+        this.maxHorsePower = maxHorsePower;
     }
 
     public String getSteeringType() {
@@ -30,8 +30,8 @@ public class Vehicle {
         return transmissionType;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    public int maxHorsePower() {
+        return maxHorsePower;
     }
 
 
