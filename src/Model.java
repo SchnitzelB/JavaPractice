@@ -23,4 +23,19 @@ public class Model extends Car {
     public int getModelYear() {
         return modelYear;
     }
+
+    @Override
+    public void moving() {
+        super.moving();
+        System.out.println("The " + getModelYear() + " " + getManufacturerName() + " " + getModelName() + " has approximately " + getMaxHorsePower() + " horsepower!");
+
+    }
+
+    @Override
+    public void noFuel() {
+        super.noFuel();
+        int empty = super.getMaxHorsePower();
+        empty -= empty;
+        System.out.println("The empty fuel tank for the " + getModelYear() + " " + getManufacturerName() + " " + getModelName() + " now has " + empty + " horsepower!");
+    }
 }

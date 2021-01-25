@@ -30,8 +30,16 @@ public class Vehicle {
         return transmissionType;
     }
 
-    public int maxHorsePower() {
+    public void moving() {
+        System.out.println("moving() method called. Vehicle is moving");
+    }
+
+    public int getMaxHorsePower() {
         return maxHorsePower;
+    }
+
+    public void noFuel() {
+        System.out.println("noFuel() method called. Fuel tank is empty!");
     }
 
 
