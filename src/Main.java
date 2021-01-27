@@ -129,12 +129,12 @@ public class Main {
 
         System.out.println("Vehicle Operations Challenge");
 
-        Vehicle vehicleOne = new Vehicle(4,2,"Automatic","Power Steering",500);
+        Vehicle vehicleOne = new Vehicle(4,2,"Automatic","Power Steering",500,0,0);
         Car car = new Car(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(),
-                vehicleOne.getMaxHorsePower(), "V8","Crimson Red","Chevrolet");
+                vehicleOne.getMaxHorsePower(), vehicleOne.getCurrentVelocity(), vehicleOne.getCurrentDirection(), "V8","Crimson Red","Chevrolet");
 
-        Model modelOne = new Model(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(), vehicleOne.getMaxHorsePower(), car.getEngine(), car.getColor(), car.getManufacturerName(), "Bel Air","Car",1959);
-        Model modelTwo = new Model(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(), vehicleOne.getMaxHorsePower(), car.getEngine(), car.getColor(), car.getManufacturerName(), "El Camino","Pickup Truck",1975);
+        Model modelOne = new Model(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(), vehicleOne.getMaxHorsePower(), vehicleOne.getCurrentVelocity(), vehicleOne.getCurrentDirection(), car.getEngine(), car.getColor(), car.getManufacturerName(), "Bel Air","Car",1959);
+        Model modelTwo = new Model(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(), vehicleOne.getMaxHorsePower(), vehicleOne.getCurrentVelocity(), vehicleOne.getCurrentDirection(), car.getEngine(), car.getColor(), car.getManufacturerName(), "El Camino","Pickup Truck",1975);
 
         System.out.println(car.getTransmissionType());
         modelOne.moving();

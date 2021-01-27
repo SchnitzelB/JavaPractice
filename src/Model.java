@@ -4,9 +4,9 @@ public class Model extends Car {
     private String bodyStyling;
     private int modelYear;
 
-    public Model(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower, String engine, String color, String manufacturerName,
+    public Model(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower, int currentVelocity, int currentDirection, String engine, String color, String manufacturerName,
                  String modelName, String bodyStyling, int modelYear) {
-        super(4, doors, transmissionType, steeringType, maxHorsePower, engine, color, manufacturerName);
+        super(4, doors, transmissionType, steeringType, maxHorsePower, currentVelocity, currentDirection, engine, color, manufacturerName);
         this.modelName = modelName;
         this.bodyStyling = bodyStyling;
         this.modelYear = modelYear;
@@ -25,7 +25,7 @@ public class Model extends Car {
     }
 
     @Override
-    public void moving() {
+    public void moving(int velocity, int direction) {
         super.moving();
         System.out.println("The " + getModelYear() + " " + getManufacturerName() + " " + getModelName() + " has approximately " + getMaxHorsePower() + " horsepower!");
 
