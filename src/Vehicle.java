@@ -9,7 +9,8 @@ public class Vehicle {
     private int currentVelocity;
     private int currentDirection;
 
-    public Vehicle(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower, int currentVelocity, int currentDirection) {
+    public Vehicle(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower,
+                   int currentVelocity, int currentDirection) {
         this.wheels = wheels;
         this.doors = doors;
         this.transmissionType = transmissionType;

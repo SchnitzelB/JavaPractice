@@ -137,8 +137,8 @@ public class Main {
         Model modelTwo = new Model(vehicleOne.getWheels(), vehicleOne.getDoors(), vehicleOne.getTransmissionType(), vehicleOne.getSteeringType(), vehicleOne.getMaxHorsePower(), vehicleOne.getCurrentVelocity(), vehicleOne.getCurrentDirection(), car.getEngine(), car.getColor(), car.getManufacturerName(), "El Camino","Pickup Truck",1975);
 
         System.out.println(car.getTransmissionType());
-        modelOne.moving();
-        modelTwo.moving();
+        modelOne.moving(250,3);
+        modelTwo.moving(500,2);
         modelTwo.noFuel();
 
         System.out.println();

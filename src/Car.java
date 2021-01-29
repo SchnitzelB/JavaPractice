@@ -5,6 +5,11 @@ public class Car extends Vehicle{
     private String manufacturerName;
 
 
+    @Override
+    public void moving(int velocity, int direction) {
+        super.moving(velocity, direction);
+    }
+
     public Car(int wheels, int doors, String transmissionType, String steeringType, int maxHorsePower, int currentVelocity, int currentDirection, String engine, String color, String manufacturerName) {
         super(4, doors, transmissionType, steeringType, maxHorsePower, currentVelocity, currentDirection);
         // In simple terms, this line, super(), basically calls and initializes the instance variables from the parent class.

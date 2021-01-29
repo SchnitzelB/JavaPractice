@@ -26,7 +26,7 @@ public class Model extends Car {
 
     @Override
     public void moving(int velocity, int direction) {
-        super.moving();
+        super.moving(velocity, direction);
         System.out.println("The " + getModelYear() + " " + getManufacturerName() + " " + getModelName() + " has approximately " + getMaxHorsePower() + " horsepower!");
 
     }
