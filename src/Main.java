@@ -177,6 +177,15 @@ public class Main {
         System.out.println("cuboid.height = " + cuboid.getHeight());
         System.out.println("cuboid.volume = " + cuboid.getVolume());
 
+        System.out.println();
+        System.out.println("-------------------------");
+        System.out.println();
+
+        System.out.println("Composition Lesson");
+
+        System.out.println();
+
+
     }
 
 

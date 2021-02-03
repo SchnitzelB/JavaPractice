@@ -38,4 +38,5 @@ public class Model extends Car {
         empty -= empty;
         System.out.println("The empty fuel tank for the " + getModelYear() + " " + getManufacturerName() + " " + getModelName() + " now has " + empty + " horsepower!");
     }
+
 }
