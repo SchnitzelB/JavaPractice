@@ -19,6 +19,10 @@ public class Dog extends Animal {
         this.coat = coat;
     }
 
+    public String getCoat() {
+        return coat;
+    }
+
     @Override
     public void eat() {
         System.out.println("Dog.eat() called");
