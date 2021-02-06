@@ -90,12 +90,15 @@ public class Main {
 
         Dog dog = new Dog("Yorkie",8,20,2,4,1,20,"Long Silky");
         Fish fish = new Fish("Clownfish", 4,2,1,2,3);
+        Cat cat = new Cat("Calico", 8, 20, 2, 4, 1, 10, "Black, Red and White");
 
         System.out.println("The " + dog.getName() + " weighs " + dog.getWeight() + " lbs.");
         dog.eat();
         dog.walk();
         //dog.run();
         fish.rest();
+        cat.walk();
+        
 
         /* METHOD OVERLOADING
         * Method overloading means defining a method in the child class that
