@@ -196,6 +196,7 @@ public class Main {
         thePC.getMonitor().drawPixelAt(1500,1200,"red");
         thePC.getMotherboard().loadProgram("Windows 1.0");
         thePC.getTheCase().pressPowerButton();
+        System.out.println("This is a test commit");
     }
 
 
